@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StreamFlix — Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="topnav">
+    <div class="brand">
+      <div class="brand-logo">StreamFlix</div>
+      <nav class="muted" style="display:flex;gap:14px;font-size:14px;">
+        <a href="#" class="muted">Home</a>
+        <a href="#" class="muted">Movies</a>
+        <a href="#" class="muted">Series</a>
+      </nav>
+    </div>
+
+    <div class="nav-actions">
+      <div class="search" title="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path stroke="white" stroke-opacity="0.7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"></path>
+          <circle cx="11" cy="11" r="6" stroke="white" stroke-opacity="0.7" stroke-width="1.6"></circle>
+        </svg>
+        <input id="searchInput" placeholder="Search titles, actors..." />
+      </div>
+      <div class="icon-btn" id="notifBtn" title="Notifications">🔔</div>
+      <div class="profile" title="Profile">B</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-label="Featured">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="title" id="heroTitle">Crimson Nights</div>
+        <div class="blurb" id="heroDesc">
+          A stylish cyber-thriller about a courier who uncovers a city-sized conspiracy.
+        </div>
+        <div class="hero-cta">
+          <div class="btn primary" id="playHero">▶ Play</div>
+          <div class="btn" id="moreHero">Details</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:12px; align-items:flex-end;">
+        <div class="trailer-box">Trailer</div>
+        <div class="quality-box">HD</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Movie Sections -->
+  <main class="container">
+    <section class="row">
+      <h3>Trending Now</h3>
+      <div class="carousel" id="trending"></div>
+    </section>
+
+    <section class="row">
+      <h3>Top Picks</h3>
+      <div class="carousel" id="topPicks"></div>
+    </section>
+
+    <section class="row">
+      <h3>Action & Adventure</h3>
+      <div class="carousel" id="action"></div>
+    </section>
+
+    <section class="row">
+      <h3>Comedies</h3>
+      <div class="carousel" id="comedy"></div>
+    </section>
+  </main>
+
+  <!-- Modal Player -->
+  <div class="modal" id="modal">
+    <div class="player">
+      <div class="video" id="videoFrame">
+        <div class="fake-screen" id="fakeScreen">Playing trailer...</div>
+      </div>
+      <div class="info">
+        <div class="left">
+          <div id="modalTitle" class="modal-title"></div>
+          <div id="modalDesc" class="muted modal-desc"></div>
+        </div>
+        <div class="close-x" id="closeModal">✕ Close</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

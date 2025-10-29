@@ -1,0 +1,222 @@
+/* ---------- Base ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #050505;
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* ---------- Navbar ---------- */
+.topnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+  background: linear-gradient(180deg, rgba(5,5,5,0.85), rgba(5,5,5,0.35));
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+  z-index: 100;
+}
+.brand-logo {
+  background: linear-gradient(90deg, #e50914, #ff3d6e);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: 800;
+}
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.06);
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+.search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ddd;
+  width: 160px;
+}
+.profile {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 6px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  margin-top: 64px;
+  height: 58vh;
+  min-height: 360px;
+  background: linear-gradient(180deg, rgba(20,20,20,0.3), rgba(0,0,0,0.9));
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 50px;
+}
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.hero-left {
+  max-width: 60%;
+}
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.blurb {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+.btn {
+  background: rgba(255,255,255,0.12);
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+}
+.btn.primary {
+  background: linear-gradient(90deg, #e50914, #ff3d6e);
+}
+.trailer-box, .quality-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+.trailer-box {
+  width: 220px;
+  height: 130px;
+  background: #2a2a2a;
+  font-weight: bold;
+}
+.quality-box {
+  width: 120px;
+  height: 70px;
+  background: #1b1b1b;
+}
+
+/* ---------- Content ---------- */
+.container {
+  padding: 26px 28px 80px;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+.row h3 {
+  font-size: 18px;
+  margin: 20px 0 12px;
+}
+.carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+.carousel::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+}
+.card {
+  min-width: 180px;
+  height: 260px;
+  background: linear-gradient(180deg, #222, #000);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.poster {
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+.meta {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.rating {
+  color: gold;
+}
+
+/* ---------- Modal ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal.open {
+  display: flex;
+}
+.player {
+  width: 90%;
+  max-width: 1000px;
+  background: #0b0b0b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.video {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+.fake-screen {
+  color: #fff;
+  font-size: 24px;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.close-x {
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 6px;
+}
+.modal-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.modal-desc {
+  margin-top: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .hero-left {
+    max-width: 100%;
+  }
+  .card {
+    min-width: 150px;
+    height: 230px;
+  }
+  .title {
+    font-size: 24px;
+  }
+}
