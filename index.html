@@ -1,94 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>StreamFlix — Demo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyFlix</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Top Nav -->
-  <header class="topnav">
-    <div class="brand">
-      <div class="brand-logo">StreamFlix</div>
-      <nav class="muted" style="display:flex;gap:14px;font-size:14px;">
-        <a href="#" class="muted">Home</a>
-        <a href="#" class="muted">Movies</a>
-        <a href="#" class="muted">Series</a>
-      </nav>
-    </div>
 
-    <div class="nav-actions">
-      <div class="search" title="Search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-          <path stroke="white" stroke-opacity="0.7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"></path>
-          <circle cx="11" cy="11" r="6" stroke="white" stroke-opacity="0.7" stroke-width="1.6"></circle>
-        </svg>
-        <input id="searchInput" placeholder="Search titles, actors..." />
-      </div>
-      <div class="icon-btn" id="notifBtn" title="Notifications">🔔</div>
-      <div class="profile" title="Profile">B</div>
-    </div>
-  </header>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">MyFlix</div>
+    <ul class="nav-links">
+      <li>Home</li>
+      <li>Movies</li>
+      <li>TV Shows</li>
+      <li>My List</li>
+    </ul>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero" aria-label="Featured">
-    <div class="hero-content">
-      <div class="hero-left">
-        <div class="title" id="heroTitle">Crimson Nights</div>
-        <div class="blurb" id="heroDesc">
-          A stylish cyber-thriller about a courier who uncovers a city-sized conspiracy.
-        </div>
-        <div class="hero-cta">
-          <div class="btn primary" id="playHero">▶ Play</div>
-          <div class="btn" id="moreHero">Details</div>
-        </div>
-      </div>
-      <div style="display:flex; gap:12px; align-items:flex-end;">
-        <div class="trailer-box">Trailer</div>
-        <div class="quality-box">HD</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Movie Sections -->
-  <main class="container">
-    <section class="row">
-      <h3>Trending Now</h3>
-      <div class="carousel" id="trending"></div>
-    </section>
-
-    <section class="row">
-      <h3>Top Picks</h3>
-      <div class="carousel" id="topPicks"></div>
-    </section>
-
-    <section class="row">
-      <h3>Action & Adventure</h3>
-      <div class="carousel" id="action"></div>
-    </section>
-
-    <section class="row">
-      <h3>Comedies</h3>
-      <div class="carousel" id="comedy"></div>
-    </section>
-  </main>
-
-  <!-- Modal Player -->
-  <div class="modal" id="modal">
-    <div class="player">
-      <div class="video" id="videoFrame">
-        <div class="fake-screen" id="fakeScreen">Playing trailer...</div>
-      </div>
-      <div class="info">
-        <div class="left">
-          <div id="modalTitle" class="modal-title"></div>
-          <div id="modalDesc" class="muted modal-desc"></div>
-        </div>
-        <div class="close-x" id="closeModal">✕ Close</div>
+  <!-- Hero / Banner Section -->
+  <div class="banner">
+    <img src="https://www.impawards.com/2023/extraction_two.html" alt="Banner" class="banner-img">
+    <div class="banner-content">
+      <h1>Money Heist</h1>
+      <p>The Professor’s plan comes alive. Join the greatest heist in history.</p>
+      <div class="banner-buttons">
+        <button class="btn play">▶ Play</button>
+        <button class="btn info">ℹ More Info</button>
       </div>
     </div>
   </div>
+
+  <!-- Movie Rows -->
+  <div class="movie-section">
+    <h2>Trending Now</h2>
+    <div class="movie-row">
+      <img src="https://image.tmdb.org/t/p/w500/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg" alt="Fast X">
+      <img src="https://image.tmdb.org/t/p/w500/r7XifzvtezNt31ypvsmb6Oqxw49.jpg" alt="Extraction 2">
+      <img src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Avatar 2">
+      <img src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Spider-Man">
+      <img src="https://image.tmdb.org/t/p/w500/fOy2Jurz9k6RnJnMUMRDAgBwru2.jpg" alt="Elemental">
+    </div>
+  </div>
+
+  <div class="movie-section">
+    <h2>Top Picks for You</h2>
+    <div class="movie-row">
+      <img src="https://image.tmdb.org/t/p/w500/3CxUndGhUcZdt1Zggjdb2HkLLQX.jpg" alt="John Wick 4">
+      <img src="https://image.tmdb.org/t/p/w500/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg" alt="Mario">
+      <img src="https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg" alt="Black Adam">
+      <img src="https://image.tmdb.org/t/p/w500/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg" alt="The Flash">
+      <img src="https://image.tmdb.org/t/p/w500/aAgGrfBwna1nO4M2USxwFgK5O0t.jpg" alt="The Creator">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MyFlix | Designed by Boss 😎</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
